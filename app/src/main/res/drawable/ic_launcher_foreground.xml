@@ -1,0 +1,20 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Shield Outer -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M 54,20 L 78,32 L 78,56 C 78,72 68,84 54,90 C 40,84 30,72 30,56 L 30,32 Z" />
+    <!-- Shield Inner Contrast -->
+    <path
+        android:fillColor="#0B0F19"
+        android:pathData="M 54,26 L 73,36 L 73,56 C 73,69 65,79 54,84 C 43,79 35,69 35,56 L 35,36 Z" />
+    <!-- Cross Slash / Block Motif -->
+    <path
+        android:strokeColor="#FF1744"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:pathData="M 44,46 L 64,66 M 64,46 L 44,66" />
+</vector>
