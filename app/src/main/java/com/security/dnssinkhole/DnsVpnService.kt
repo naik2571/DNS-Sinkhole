@@ -36,7 +36,7 @@ class DnsVpnService : VpnService() {
         }
 
         startSinkhole()
-        return START_STICKY
+        return START_NOT_STICKY
     }
 
     private fun startSinkhole() {
@@ -52,7 +52,7 @@ class DnsVpnService : VpnService() {
                 .addAddress("10.0.0.2", 32)
                 .addDnsServer("10.0.0.2")
                 .addRoute("10.0.0.2", 32)
-                .setBlocking(false)
+                .setBlocking(true)
 
             vpnInterface = builder.establish()
 
@@ -135,8 +135,6 @@ class DnsVpnService : VpnService() {
             } catch (_: Exception) {
                 // Non-fatal packet parsing loop
             }
-
-            try { Thread.sleep(20) } catch (_: Exception) {}
         }
 
         try { upstreamSocket?.close() } catch (_: Exception) {}
